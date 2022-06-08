@@ -24,11 +24,7 @@
         }
         /* H1 */
         h1 {
-            font-size: 50px;
-        }
-        /* Bordo */
-        .bordo {
-            border: 1px solid black;
+            font-size: 60px;
         }
         /* Container */
         .container {
@@ -40,6 +36,18 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
+        }
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            list-style: none;
+        }
+        li {
+            padding: 1rem;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -48,8 +56,19 @@
     <!-- Stamp di Hello World -->
     <div class="container bordo flex_cent">
         <h1>Hello World</h1>
+        <!-- Dynamic data (no foreach) -->
+        <!-- <ul class="bordo">
+            <li>il mio nome è : {{$name}}</li>
+            <li>il mio cognome è : {{$surname}}</li>
+            <li>il mio ruolo è : {{$role}}</li>
+        </ul> -->
+        <!-- Array Associativo -->
+        <ul>
+        @foreach ($users as $user)
+            <!-- Stampa tutto quello presente nel mio array associativo -->
+            <li>{{$user}}</li>
+        @endforeach
+        </ul>
     </div>
-        
-
 </body>
 </html>

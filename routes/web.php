@@ -18,6 +18,19 @@ use Illuminate\Support\Facades\Route;
 }); */
 
 Route::get('/', function () {
-    return view('home');
+    $name = "Alessandro";
+    $surname = "Pecorilla";
+    $role = "Junior Full Stack Web Developer";
+    /* Prova array Associativo */
+    $users = [
+    /* Tutte queste rappresentano una serie di chiavi => valori */
+    "nome" => "Alessandro",
+    "cognome" => "Pecorilla",
+    "età" => "27",
+    "role" => "Junior Full Stack Web Developer",
+];
+
+/*     var_dump($users); */
+    return view('home', compact('name', 'surname', 'role', 'users'));
 });
 
