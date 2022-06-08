@@ -24,10 +24,10 @@ Route::get('/', function () {
     /* Prova array Associativo */
     $users = [
     /* Tutte queste rappresentano una serie di chiavi => valori */
-    "nome" => "Alessandro",
-    "cognome" => "Pecorilla",
-    "età" => "27",
-    "role" => "Junior Full Stack Web Developer",
+    "Nome" => "Alessandro",
+    "Cognome" => "Pecorilla",
+    "Età" => "27",
+    "Role" => "Junior Full Stack Web Developer",
 ];
 
 /*     var_dump($users); */

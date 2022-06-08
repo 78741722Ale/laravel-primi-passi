@@ -64,9 +64,9 @@
         </ul> -->
         <!-- Array Associativo -->
         <ul>
-        @foreach ($users as $user)
+        @foreach ($users as $key => $user)
             <!-- Stampa tutto quello presente nel mio array associativo -->
-            <li>{{$user}}</li>
+            <li>{{$key}} : {{$user}}</li>
         @endforeach
         </ul>
     </div>
