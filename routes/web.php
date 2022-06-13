@@ -24,13 +24,28 @@ Route::get('/', function () {
     /* Prova array Associativo */
     $users = [
     /* Tutte queste rappresentano una serie di chiavi => valori */
-    "Nome" => "Alessandro",
-    "Cognome" => "Pecorilla",
-    "Età" => "27",
-    "Role" => "Junior Full Stack Web Developer",
-];
+        "Nome" => "Alessandro",
+        "Cognome" => "Pecorilla",
+        "Età" => "27",
+        "Role" => "Junior Full Stack Web Developer",
+    ];
 
 /*     var_dump($users); */
     return view('home', compact('name', 'surname', 'role', 'users'));
 });
 
+
+Route::get('/a', function () {
+    $page = "a";
+    return view('test.a', compact('page'));
+})->name('a');
+
+Route::get('/b-nuova', function () {
+    $page = "b";
+    return view('test.b', compact('page'));
+})->name('b');
+
+Route::get('/c', function () {
+    $page = "c";
+    return view('test.c', compact('page'));
+})->name('c');
